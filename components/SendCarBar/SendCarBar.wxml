@@ -1,0 +1,22 @@
+<!--components/SendCarBar/SendCarBar.wxml-->
+<view class="send-bar">
+  <!-- info -->
+  <view class="info">
+    <view class="top bar">
+      <view>取车</view>
+      <view>{{ info.type == '1' ? '已完成' : '待完成' }}</view>
+    </view>
+    <view class="bottom bar">
+      <view>手牌号：{{ info.cNum }}</view>
+      <view>{{ info.dataTime }}</view>
+    </view>
+  </view>
+  <!-- options or finished time -->
+  <view class="bottom-bar">
+    <!-- <view>完成时间:2020-03-05 12:00</view> -->
+    <view class="options">
+      <view size="mini" bindtap="sendError">报错</view>
+      <view size="mini" bindtap="finish">任务完成</view>
+    </view>
+  </view>
+</view>

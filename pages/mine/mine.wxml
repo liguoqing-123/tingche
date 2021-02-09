@@ -1,0 +1,8 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine">
+  <block wx:for="{{array}}" wx:key="item.orderId">
+    <get-car-bar
+      info="{{item}}"
+    />
+  </block>
+</view>

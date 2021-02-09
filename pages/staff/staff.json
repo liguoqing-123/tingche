@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "send-car-bar": "/components/SendCarBar/SendCarBar",
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "navigationBarTitleText": "SHARQUE员工",
+  "enablePullDownRefresh": true
+}

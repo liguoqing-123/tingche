@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="user-index">
+  <view class="banner">
+    <image src="/static/imgs/banner.png" class="logo"></image>
+    <view class="user">
+      <image src="{{ userAvatar }}"></image>
+      <view>尊敬的 {{ userNickName }}</view>
+      <view>欢迎入住</view>
+    </view>
+  </view>
+  <view class="number">
+    <view class="number-item">
+      您的房间号：
+      <text>{{ hNum }}</text>
+    </view>
+    <view class="number-item">
+      您的手牌号：
+      <text>{{ cNum }}</text>  
+    </view>
+  </view>
+  <view wx:if="{{ content !== '' }}" class="errmessage">{{ content }}</view>
+  <!-- 取车 / car.gif -->
+  <view class="getCar" wx:if="{{ status === '1' || status === '0' }}">
+    <view class="car-gif">
+      <image src="/static/imgs/car1.gif"></image>
+      <text>正在取车</text>
+    </view>
+  </view>
+  <view class="getCar" wx:elif="{{ status === '' || status === '3' }}">
+    <button class="car-gif" bindtap="getCar" open-type="getUserInfo">
+      <image src="/static/imgs/car1.gif"></image>
+      <text>点我取车</text>
+    </button>
+  </view>
+  <view class="getCar" wx:elif="{{ status === '2' }}">
+    <view class="car-gif">
+      <image src="/static/imgs/car1.gif"></image>
+      <text>取车完成</text>
+    </view>
+  </view>
+  <!-- toast -->
+  <van-popup
+    show="{{ isShow }}"
+    round
+    bind:close="onCNumClose"
+    custom-style="height: 30%;width: 80%;"
+  >
+    <view class="container">
+      <view class="input">
+        <text>房间号：</text>
+        <input value="{{inputHNum}}" bindinput="inputHNum" placeholder="请输入房间号"></input>
+      </view>
+      <view class="input">
+        <text>手牌号：</text>
+        <input value="{{inputCNum}}" bindinput="inputCNum" placeholder="请输入手牌号"></input>
+      </view>
+      <view class="button">
+        <text bindtap="cancelHander">取消</text>
+        <text bindtap="sureHandler">确定</text>
+      </view>
+    </view>
+  </van-popup>
+  <van-popup
+    show="{{ popupShow }}"
+    round
+    bind:close="onClosePopup"
+    position="bottom"
+    custom-style="height: 30%;"
+  >
+    <empty bindcancelInput="onClosePopup" />
+  </van-popup>
+</view>

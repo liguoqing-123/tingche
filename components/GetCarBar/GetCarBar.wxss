@@ -1,0 +1,22 @@
+/* components/GetCarBar.wxss */
+.car-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  color: #666666;
+  border: 1rpx solid #ececec;
+  border-left: none;
+  border-right: none;
+}
+
+.bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top {
+  margin-bottom: 20rpx;
+}
+

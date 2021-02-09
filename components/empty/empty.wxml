@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="title">绑定手机号</view>
+  <view class="center">
+    <input value="{{ phoneNumber }}" bindinput="inputHandler" placeholder="请输入手机号"></input>
+  </view>
+  <view class="sure">
+    <view bindtap="cancel">取消</view>
+    <view bindtap="commit">确定</view>
+  </view>
+</view>

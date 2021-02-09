@@ -1,0 +1,25 @@
+<!--pages/staff/staff.wxml-->
+<view class="staff">
+  <block wx:for="{{ array }}" wx:key="{{ index }}">
+    <send-car-bar
+      bindemmiter="changeErrMsg"
+      info="{{ item }}"
+      bindfinished="finshed"
+    />
+  </block>
+
+  <van-popup
+    show="{{ isShow }}"
+    bind:close="onClose"
+    round
+    custom-style="height: 30%;width: 80%;"
+  >
+    <view class="err" wx:if="{{ isShow }}">
+      <textarea value="{{errMsg}}" bindinput="inputMsg" placeholder="请输入报错内容"></textarea>
+      <view>
+        <view bindtap="cancelHandler">取消</view>
+        <view bindtap="sendHandler">发送</view>
+      </view>
+    </view>
+  </van-popup>
+</view>

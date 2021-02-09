@@ -1,0 +1,50 @@
+/* pages/staff/staff.wxss */
+.err-bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .5;
+  width: 100%;
+  height: 100%;
+}
+.err {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+.err > textarea {
+  width: 100%;
+  height: 72%;
+  padding: 20rpx;
+}
+
+.err > view {
+  width: 100%;
+  height: 28%;
+  display: flex;
+  border-top: 1rpx solid #efefef;
+  background-color: #FFFFFF;
+}
+.err > view > view {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.err > view > view:hover {
+  opacity: .8;
+  background-color: #efefef;
+}
+
+.err > view > view:first-child {
+  color: #595c5a;
+}
+
+.err > view > view:last-child {
+  color: #ff5573;
+}

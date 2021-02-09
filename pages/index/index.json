@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "empty": "/components/empty/empty"
+  },
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true
+}

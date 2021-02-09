@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "get-car-bar": "/components/GetCarBar/GetCarBar"
+  },
+  "navigationBarTitleText": "我的",
+  "enablePullDownRefresh": true
+}

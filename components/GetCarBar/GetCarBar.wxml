@@ -1,0 +1,11 @@
+<!--components/GetCarBar.wxml-->
+<view class="car-bar">
+  <view class="top bar">
+    <view>取车</view>
+    <view>{{ info.type == '2' ? '已完成' : '待完成' }}</view>
+  </view>
+  <view class="bottom bar">
+    <view>手牌号：{{ info.cNum }}</view>
+    <view>{{ info.dataTime }}</view>
+  </view>
+</view>
